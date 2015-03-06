@@ -1,14 +1,14 @@
-#for mymkdir in $(cat mkdir/list); do
-#	echo MKDIR : $mymkdir
-#	mkdir $mymkdir -p
-#done
+for mymkdir in $(cat mkdir/list); do
+	echo MKDIR : $mymkdir
+	mkdir $mymkdir -p
+done
 
-#for myapt in $(cat apt/list); do
-#	echo apt-get : $myapt
-#	sudo apt-get install $myapt
-#done
+for myapt in $(cat apt/list); do
+	echo apt-get : $myapt
+	sudo apt-get install $myapt
+done
 
-#sudo apt-get install mysql-server -y
+sudo apt-get install mysql-server -y
 
 apt-get install curl
 curl -sL https://deb.nodesource.com/setup | bash -
